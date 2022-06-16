@@ -42,7 +42,7 @@ align-items:center;
 border-radius: 50%;
 margin-right: 2rem;
 text-decoration: none;
-background :linear-gradient (35deg, #494949,#313131 )
+ background: linear-gradient(to right, rgba(73,73,73,1) 0%,rgba(49,49,49,1) 100%);
 width: 6rem;
 height:6 rem;
 cursor : pointer;
@@ -59,7 +59,7 @@ svg{
 
 }
 &.active{
-  background: linear-gradient(to right,#f27121, #e94057);
+  background: linear-gradient(to right, rgba(242,113,33,1) 0%,rgba(233,64,87,1) 100%);
 }
   svg{
     color:white;
