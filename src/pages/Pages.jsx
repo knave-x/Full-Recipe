@@ -3,6 +3,7 @@ import Home from "./Home";
 import { Route, Routes } from "react-router-dom";
 import Cuisine from "./Cuisine";
 import Searched from "./Searched";
+import Recipe from "./Recipe";
 
 const Pages = () => {
   return (
@@ -11,8 +12,13 @@ const Pages = () => {
       <Route path="cuisine">
         <Route path=":type" element={<Cuisine />} />
       </Route>
-      <Route path="searched" >
-        <Route path=":search" element={<Searched/>} /> 
+
+      <Route path="searched">
+        <Route path=":search" element={<Searched />} />
+      </Route>
+
+      <Route path="recipe">
+        <Route path=":name" element={<Recipe />} />
       </Route>
     </Routes>
   );

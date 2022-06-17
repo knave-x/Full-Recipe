@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { Link } from "react-router-dom";
 const Popular = () => {
   const [popular, setPopular] = useState([]);
 
@@ -16,7 +17,7 @@ const Popular = () => {
       setPopular(JSON.parse(check));
     } else {
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=fe5e0844d264476598fde829503a819c&number=9`
+        `https://api.spoonacular.com/recipes/random?apiKey=212b04407f6241e68d973b000c194eba&number=9`
       );
 
       const data = await api.json();
@@ -44,9 +45,11 @@ const Popular = () => {
             return (
               <SplideSlide key={i}>
                 <Card>
+                  <Link to={"/recipe/"+ recipe.id}>
                   <p>{recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title}></img>
                   <Gradient />
+                  </Link>
                 </Card>
               </SplideSlide>
             );
