@@ -1,21 +1,15 @@
 import Veggie from "../components/Veggie";
 import Popular from "../components/Popular";
 
+import React from "react";
 
-import React from 'react'
-
-const  Home= ()=> {
+const Home = () => {
   return (
     <div>
-        <Veggie/>
-        <Popular/>
-
-        
-
-
-
+      <Veggie />
+      <Popular />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

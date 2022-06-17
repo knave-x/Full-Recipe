@@ -43,8 +43,8 @@ const Veggie = () => {
         >
           {veggie.map((recipe, i) => {
             return (
-              <SplideSlide>
-                <Card key={i}>
+              <SplideSlide key={i}>
+                <Card>
                   <p>{recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title}></img>
                   <Gradient />
