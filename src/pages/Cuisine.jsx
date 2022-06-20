@@ -26,8 +26,10 @@ const Cuisine = () => {
       {cuisine.map((item, i) => {
         return (
           <Card key={i}>
-            <img src={item.image} alt="" />
-            <h4>{item.title}</h4>
+            <Link to={"/recipe/" + item.id}>
+              <img src={item.image} alt="" />
+              <h4>{item.title}</h4>
+            </Link>
           </Card>
         );
       })}
