@@ -17,7 +17,6 @@ const Searched = () => {
     console.log("yyyyy");
     setSearchRecipes(recipes.results);
   };
-
   useEffect(() => {
     getSearched(search);
   }, [search]);
