@@ -7,12 +7,17 @@ import Searched from "../pages/Searched";
 
 const Search = () => {
   const [input, setInput] = useState("");
+  const [startSearch, setStartSearch] = useState(false);
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   if (!input) {
-  //     navigate(`/searched/` + input);
-  //   }
-  // }, [input]);
+  useEffect(() => {
+    if (startSearch) {
+      if (!input) {
+        navigate(`/`);
+      }
+    } else {
+      setStartSearch(true);
+    }
+  }, [input]);
 
   const submitHandler = (e) => {
     e.preventDefault();
