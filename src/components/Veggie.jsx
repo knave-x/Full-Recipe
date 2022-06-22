@@ -48,7 +48,7 @@ const Veggie = () => {
                 <Card>
                   <Link to={"/recipe/" + recipe.id}>
                     <p>{recipe.title}</p>
-                    <img src={recipe.image} alt={recipe.title}></img>
+                    <img src={recipe.image} alt=""></img>
                     <Gradient />
                   </Link>
                 </Card>
@@ -74,15 +74,15 @@ const Card = styled.div`
     border-radius: 2rem;
     position: absolute;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 400px;
     obeject-fit: cover;
   }
 
   p {
     position: absolute;
     z-index: 10;
-    left: 50%;
+
     bottom: 0%;
     transform: translate (-50%, 0%);
     color: white;
